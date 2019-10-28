@@ -30,24 +30,19 @@ Koin is used for dependency injection.
 
 Glide is used for image loading and Timber for logging.
 
+Lottie for loading animation
 
+LeakCanary for memory leak
+
+Android Debug Database for configure db or pref xml file
 
 A sample app consist of 2 screens: List of User Repo and Repo details.
-
-Getting Started
----------------
-This project uses the Gradle build system. To build this project, use the
-`gradlew build` command or use "Import Project" in Android Studio.
-
-There are two Gradle tasks for testing the project:
-* `connectedAndroidTest` - for running Espresso on a connected device
-* `test` - for running unit tests
 
 Screenshots
 -----------
 
 ![HomeFragment](screenshots/phone_home_empty.png "First")
-![HomeFragment Grid](screenshots/phone_home_list.png "After Search User")
+![HomeFragment](screenshots/phone_home_list.png "After Search User")
 ![DetailFragment](screenshots/phone_detail.png "After Clicked Repos Item")
 
 Libraries Used
@@ -91,6 +86,9 @@ categories:
   * [GSON][95] A Json - Object converter using reflection.
   * [Glide][90] Image loading.
   * [Timber][96] A logger.
+  * [Lottie][97] Loading animation.
+  * [LeakCanary][98] find memory leak
+  * [Android Debug Database][99] Configure db or pref xml file
 
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
@@ -117,6 +115,9 @@ categories:
 [94]: https://square.github.io/okhttp/
 [95]: https://github.com/google/gson
 [96]: https://github.com/JakeWharton/timber
+[97]: https://github.com/airbnb/lottie-android
+[98]: https://github.com/square/leakcanary
+[99]: https://github.com/amitshekhariitbhu/Android-Debug-Database
 
 
 License
