@@ -43,7 +43,7 @@ A sample app consist of 2 screens: List of User Repo and Repo details.
 APK FILE
 -----------
 
-[githubingiterview-1.0.apk](https://github.com/developersancho/GithubIngInterview/apk/githubingiterview-1.0.apk)
+[githubingiterview-1.0.apk](https://github.com/developersancho/GithubIngInterview/blob/master/apk/githubingiterview-1.0.apk)
 
 
 Screenshots
