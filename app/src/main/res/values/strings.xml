@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GithubIngInterview</string>
+
+    <string name="toolbar_title_home">Home</string>
+    <string name="btn_submit">Submit</string>
+    <string name="hint_username">Username</string>
+    <string name="tools_text_repo_name">Repo Name</string>
+    <string name="error_message_enter_user_name">Please enter username</string>
+    <string name="tools_user_name">User Name</string>
+    <string name="tools_star_count">Stars: 3</string>
+    <string name="tools_open_issues">Open Issues: 3</string>
+    <string name="message_added_favorite">Added to Favorites.</string>
+    <string name="message_removed_favorite">Removed from Favorites.</string>
+</resources>

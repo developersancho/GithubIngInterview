@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="developersancho.githubinginterview.ui.home.HomeViewModel" />
+
+        <variable
+            name="repo"
+            type="developersancho.githubinginterview.data.remote.model.Repos" />
+    </data>
+    <!--    android:onClick="@{(v) -> vm.repoClicksOnItem(v,repo)}"-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ripple"
+        android:clickable="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/cabin"
+            android:text="@{repo.name}"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/tools_text_repo_name" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRepoStar"
+            favListImage="@{repo.isFav}"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_star_border_24dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
