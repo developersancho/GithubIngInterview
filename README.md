@@ -36,7 +36,14 @@ LeakCanary for memory leak
 
 Android Debug Database for configure db or pref xml file
 
+Flashbar for showing message
+
 A sample app consist of 2 screens: List of User Repo and Repo details.
+
+APK FILE
+-----------
+
+[githubingiterview-1.0.apk](https://github.com/developersancho/GithubIngInterview/app/build/outputs/apk/debug/githubingiterview-1.0.apk)
 
 Screenshots
 -----------
@@ -89,6 +96,7 @@ categories:
   * [Lottie][97] Loading animation.
   * [LeakCanary][98] find memory leak
   * [Android Debug Database][99] Configure db or pref xml file
+  * [Flashbar][100] for show message
 
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
@@ -118,6 +126,7 @@ categories:
 [97]: https://github.com/airbnb/lottie-android
 [98]: https://github.com/square/leakcanary
 [99]: https://github.com/amitshekhariitbhu/Android-Debug-Database
+[100]: https://github.com/aritraroy/Flashbar
 
 
 License

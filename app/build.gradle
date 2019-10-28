@@ -120,6 +120,9 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.1"
     implementation 'androidx.room:room-ktx:2.2.1'
 
+    // flashbar
+    implementation 'com.andrognito.flashbar:flashbar:1.0.3'
+
     // test part
     testImplementation "org.koin:koin-test:2.0.1"
     testImplementation("com.squareup.okhttp3:mockwebserver:4.2.1")

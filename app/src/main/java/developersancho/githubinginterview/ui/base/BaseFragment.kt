@@ -12,7 +12,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import developersancho.githubinginterview.utils.extension.showToast
+import developersancho.githubinginterview.utils.extension.showFlashBar
 import developersancho.githubinginterview.utils.helper.AutoClearedValue
 import developersancho.githubinginterview.utils.widget.LoadingLottieDialog
 
@@ -68,11 +68,11 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment(), IBasePresenter {
     }
 
     override fun onServerError(message: String, code: Int) {
-        requireContext().showToast(message)
+        requireActivity().showFlashBar(message + "code: " + code)
     }
 
     override fun onServiceError(message: String, code: String) {
-
+        requireActivity().showFlashBar(message + "code: " + code)
     }
 
     protected fun hideKeyboard(activity: Activity) {
