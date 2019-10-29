@@ -10,7 +10,7 @@ import developersancho.githubinginterview.databinding.ItemUserRepoBinding
 import developersancho.githubinginterview.ui.base.BaseViewHolder
 import developersancho.githubinginterview.utils.extension.inflate
 
-class RepoAdapter(private val viewModel: HomeViewModel) :
+class RepoAdapter :
     ListAdapter<Repos, RepoAdapter.RepoViewHolder>(DiffCallback()) {
 
     var onItemClick: ((Repos) -> Unit)? = null
@@ -21,15 +21,14 @@ class RepoAdapter(private val viewModel: HomeViewModel) :
 
     override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
         holder.apply {
-            bind(getItem(position), viewModel)
+            bind(getItem(position))
             itemView.tag = getItem(position)
         }
     }
 
     inner class RepoViewHolder(view: View) : BaseViewHolder<ItemUserRepoBinding>(view) {
-        fun bind(repo: Repos, viewModel: HomeViewModel) {
+        fun bind(repo: Repos) {
             binding.repo = repo
-            binding.vm = viewModel
             binding.root.setOnClickListener {
                 onItemClick?.invoke(repo)
             }

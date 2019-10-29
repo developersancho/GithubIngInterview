@@ -51,7 +51,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     private fun initAdapter() {
-        adapter = RepoAdapter(viewModel)
+        adapter = RepoAdapter()
         binding.rvUserRepos.addItemDecoration(
             DividerItemDecoration(
                 requireContext(),

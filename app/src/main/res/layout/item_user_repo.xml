@@ -6,10 +6,6 @@
     <data>
 
         <variable
-            name="vm"
-            type="developersancho.githubinginterview.ui.home.HomeViewModel" />
-
-        <variable
             name="repo"
             type="developersancho.githubinginterview.data.remote.model.Repos" />
     </data>

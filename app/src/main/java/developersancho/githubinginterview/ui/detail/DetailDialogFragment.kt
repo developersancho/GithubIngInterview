@@ -57,29 +57,36 @@ class DetailDialogFragment : BaseDialogFragment<FragmentDetailBinding>() {
         }
 
         binding.ivStar.setOnClickListener {
-            val isFav = viewModel.model?.isFav!!
-            viewModel.model?.isFav = !isFav
+            setNewFavValueAndInsert()
+            configFavIcon()
+        }
+    }
 
-            viewModel.insertFavRepo(
-                FavRepo(
-                    repoId = viewModel.model?.repoId,
-                    isFav = viewModel.model?.isFav!!
-                )
+    private fun setNewFavValueAndInsert() {
+        val isFav = viewModel.model?.isFav!!
+        viewModel.model?.isFav = !isFav
+
+        viewModel.insertFavRepo(
+            FavRepo(
+                repoId = viewModel.model?.repoId,
+                isFav = viewModel.model?.isFav!!
             )
-            if (viewModel.model?.isFav!!) {
-                binding.ivStar.load(R.drawable.ic_star_full_24dp)
-                requireContext().showToast(getString(R.string.message_added_favorite))
-                if (model?.onRefresh != null) {
-                    model?.onRefresh?.invoke(viewModel.model?.isFav!!)
-                }
-            } else {
-                binding.ivStar.load(R.drawable.ic_star_border_24dp)
-                requireContext().showToast(getString(R.string.message_removed_favorite))
-                if (model?.onRefresh != null) {
-                    model?.onRefresh?.invoke(viewModel.model?.isFav!!)
-                }
-            }
+        )
+    }
 
+    private fun configFavIcon() {
+        if (viewModel.model?.isFav!!) {
+            binding.ivStar.load(R.drawable.ic_star_full_24dp)
+            requireContext().showToast(getString(R.string.message_added_favorite))
+            if (model?.onRefresh != null) {
+                model?.onRefresh?.invoke(viewModel.model?.isFav!!)
+            }
+        } else {
+            binding.ivStar.load(R.drawable.ic_star_border_24dp)
+            requireContext().showToast(getString(R.string.message_removed_favorite))
+            if (model?.onRefresh != null) {
+                model?.onRefresh?.invoke(viewModel.model?.isFav!!)
+            }
         }
     }
 }
